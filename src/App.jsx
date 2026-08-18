@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 import LoginForm from './Component/LoginForm'
 import ConsultancyHome from './Component/ConsultancyHome'
+import ConsultationBooking from './Component/ConsultationBooking'
 import AboutPage from './Component/AboutPage'
 import ServicesPage from './Component/ServicesPage'
 import CountriesPage from './Component/CountriesPage'
@@ -17,6 +18,7 @@ function App() {
       {isLoggedIn ? (
         <Routes>
           <Route path="/" element={<ConsultancyHome />} />
+          <Route path="/consultation-booking" element={<ConsultationBooking />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/countries" element={<CountriesPage />} />
