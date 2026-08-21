@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
 import LoginForm from './Component/LoginForm'
 import ConsultancyHome from './Component/ConsultancyHome'
@@ -11,6 +11,26 @@ import ContactPage from './Component/ContactPage'
 import SupportPage from './Component/SupportPage'
 import CircleCursor from './Component/CircleCursor'
 
+function BackButton() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleBack = () => {
+    if (window.history.length > 1 && location.pathname !== '/') {
+      navigate(-1)
+      return
+    }
+
+    navigate('/')
+  }
+
+  return (
+    <button type="button" className="back-button" onClick={handleBack} aria-label="Go back" title="Go back">
+      <span aria-hidden="true">&#8592;</span>
+    </button>
+  )
+}
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
@@ -19,6 +39,7 @@ function App() {
       {isLoggedIn ? (
         <div className="consultancy-app">
           <CircleCursor />
+          <BackButton />
           <Routes>
             <Route path="/" element={<ConsultancyHome />} />
             <Route path="/consultation-booking" element={<ConsultationBooking />} />
