@@ -1,0 +1,10 @@
+html,
+body,
+#root,
+* {
+	cursor: url('./assets/mouse1.png') 450 337, auto;
+}
+
+*:active {
+	cursor: url('./assets/mouse1.png') 450 337, auto;
+}

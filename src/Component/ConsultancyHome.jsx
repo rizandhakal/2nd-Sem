@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import bcImage from '../assets/bc.jpg'
 import miranaLogo from '../assets/MIrana.jpg'
+import planeImage from '../assets/plane.png'
 
 const ConsultancyHome = () => {
   const navigate = useNavigate()
@@ -31,6 +32,11 @@ const ConsultancyHome = () => {
       </header>
 
       <main className="hero-section">
+        <div className="flight-path" aria-hidden="true">
+          <span className="flight-trail" />
+          <img src={planeImage} alt="" className="airplane" />
+        </div>
+
         <div className="hero-copy">
           <span className="eyebrow">Mirana  Education Consultancy</span>
           <h1>MIRANA</h1>
@@ -134,7 +140,7 @@ const ConsultancyHome = () => {
             </div>
             <div className="service-item">
               <div className="service-icon">🎯</div>
-              <h3>IELTS/TOEFL Prep</h3>
+              <h3>IELTS/ PTE Prep</h3>
               <p>Coaching and resources to achieve competitive scores in English proficiency tests</p>
             </div>
             <div className="service-item">
@@ -192,15 +198,15 @@ const ConsultancyHome = () => {
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <p className="testimonial-text">"Mirana's team made my university selection process smooth and stress-free. I'm now studying at University of Melbourne!"</p>
-              <p className="testimonial-author">- Yatin Sharma, Dubai</p>
+              <p className="testimonial-author">- Sulochan Sigdel, UK </p>
             </div>
             <div className="testimonial-card">
               <p className="testimonial-text">"The visa guidance and document preparation support was exceptional. Highly recommended for anyone planning to study abroad."</p>
-              <p className="testimonial-author">- Bishal Shrestha, UK</p>
+              <p className="testimonial-author">- Prasish Dhakal, UK</p>
             </div>
             <div className="testimonial-card">
               <p className="testimonial-text">"Mirana not only helped me get into my dream university but also secured a scholarship. Grateful for their dedication!"</p>
-              <p className="testimonial-author">- Amir Shrestha, Canada</p>
+              <p className="testimonial-author">- Sushil Kumar Chaudhary, Canada</p>
             </div>
           </div>
         </div>

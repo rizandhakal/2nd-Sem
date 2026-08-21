@@ -147,7 +147,7 @@ const ConsultationBooking = () => {
                   required
                   placeholder="Enter your full address"
                   rows="3"
-                />
+                />Add
               </div>
 
               <div className="form-group full-width">
