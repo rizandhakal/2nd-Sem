@@ -12,7 +12,7 @@ const LoginForm = ({ onLoginSuccess }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    if (username === 'Rizan Dhakal' && password === 'rizadhakal9897') {
+    if (username === 'A' && password === '9') {
       setMessage('Login successful! Welcome back.')
       onLoginSuccess?.()
     } else {
